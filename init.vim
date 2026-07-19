@@ -20,6 +20,8 @@ Plug 'https://github.com/matze/vim-move'
 Plug 'voldikss/vim-floaterm'
 Plug 'vim-python/python-syntax'
 Plug 'alvan/vim-closetag'
+Plug 'mofiqul/vscode.nvim'
+Plug 'psf/black'
 
 call plug#end()
 
@@ -42,7 +44,7 @@ set updatetime=300
 set signcolumn=yes
 
 " :colorscheme onedark
-:colorscheme gruber-darker
+:colorscheme vscode
 let g:airline_theme='onedark'
 
 
@@ -103,6 +105,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " CoC - Sembol yeniden adlandır
 nmap <leader>rn <Plug>(coc-rename)
+nnoremap <Space>b :Black<CR>
 
 " CoC - Hover ile dokümantasyon göster
 nnoremap <silent> K :call ShowDocumentation()<CR>
@@ -125,10 +128,13 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
 
-let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.8
+
+" let g:floaterm_keymap_new    = '<F7>'
 let g:floaterm_keymap_prev   = '<F8>'
 let g:floaterm_keymap_next   = '<F9>'
-let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_keymap_toggle = '<C-b>'
 nnoremap <F5> :w<CR>:FloatermNew --autoclose=0 python3 %<CR>
 
 
@@ -150,8 +156,8 @@ let g:user42 = 'cbozkurt'
 let g:mail42 = 'cbozkurt@student.42kocaeli.com.tr'
 
 " " Make background transparent
-autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
-autocmd VimEnter * hi NonText guibg=NONE ctermbg=NONE
-autocmd VimEnter * hi LineNr guibg=NONE ctermbg=NONE
-autocmd VimEnter * hi SignColumn guibg=NONE ctermbg=NONE
-autocmd VimEnter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+" autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
+" autocmd VimEnter * hi NonText guibg=NONE ctermbg=NONE
+" autocmd VimEnter * hi LineNr guibg=NONE ctermbg=NONE
+" autocmd VimEnter * hi SignColumn guibg=NONE ctermbg=NONE
+" autocmd VimEnter * hi EndOfBuffer guibg=NONE ctermbg=NONE
