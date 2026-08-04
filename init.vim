@@ -51,6 +51,7 @@ let g:airline_theme='onedark'
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 let g:python_highlight_all = 1
+let g:NERDTreeWinPos = "right"
 
 " Auto-close brackets
 inoremap { {}<Left>
